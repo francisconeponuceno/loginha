@@ -8,6 +8,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
 
@@ -35,13 +36,13 @@
                         <div><span class="produto-item">Código:</span> 123456</div>
                         <div><span class="produto-item">Cor:</span> Preto</div>
                     </td>
-                    <td>1000</td>
-                    <td>
-                        <span class="badge bg-danger"><i class="bi bi-dash" id="menos-mais"></i></span>
+                    <td id="p_unitario">1000</td>
+                    <td id="qtd">
+                        <span class="badge bg-danger"><i class="bi bi-dash" id="menos" onclick="texte()"></i></span>
                         0
-                        <span class="badge bg-success"><i class="bi bi-plus" id="menos-mais"></i></span>
+                        <span class="badge bg-success"><i class="bi bi-plus" id="mais"></i></span>
                     </td>
-                    <td>0</td>
+                    <td id="total">0</td>
                 </tr>
                 <tr>
                     <td>
@@ -54,9 +55,9 @@
                     </td>
                     <td>2000</td>
                     <td>
-                        <span class="badge bg-danger"><i class="bi bi-dash" id="menos-mais"></i></span>
+                        <span class="badge bg-danger"><i class="bi bi-dash" id="menos"></i></span>
                         0
-                        <span class="badge bg-success"><i class="bi bi-plus" id="menos-mais"></i></span>
+                        <span class="badge bg-success"><i class="bi bi-plus" id="mais"></i></span>
                     </td>
                     <td>0</td>
                 </tr>
@@ -71,9 +72,9 @@
                     </td>
                     <td>2500</td>
                     <td>
-                        <span class="badge bg-danger"><i class="bi bi-dash" id="menos-mais"></i></span>
+                        <span class="badge bg-danger"><i class="bi bi-dash" id="menos"></i></span>
                         0
-                        <span class="badge bg-success"><i class="bi bi-plus" id="menos-mais"></i></span>
+                        <span class="badge bg-success"><i class="bi bi-plus" id="mais"></i></span>
                     </td>
                     <td>0</td>
                 </tr>
