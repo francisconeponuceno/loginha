@@ -6,9 +6,12 @@ function alterarQtd(produto, acao){
 
     if (acao == '-' && qtd.innerHTML == 0){
         alert('Atenção! A quantidade não pode ser menor que 0.')
+        x()
+        
     }else{
         acao == '+' ? qtd.innerHTML++ : qtd.innerHTML--
-        total.innerHTML = qtd.innerHTML * valor.innerHTML
+        const valortotal = qtd.innerHTML * somentenumeros(valor.innerHTML)
+        total.innerHTML = formatarvalor(valortotal)
         soma()
     }
     
@@ -17,7 +20,17 @@ function alterarQtd(produto, acao){
 function soma(){
     let soma = 0
     for(let i = 1; i < 4; i++){
-        soma += Number(document.getElementById('total_' + i).innerHTML)
+        let numero = somentenumeros(document.getElementById('total_' + i).innerHTML)
+        soma += Number(numero)
     }
-    document.getElementById('subtotal').innerHTML = soma
+    document.getElementById('subtotal').innerHTML = formatarvalor(soma)
 }
+
+function somentenumeros(n){
+    return n.replace(/\D/g,'')
+}
+
+function formatarvalor(n){
+    return 'R$ ' + n.toLocaleString('pt-br')
+}
+
